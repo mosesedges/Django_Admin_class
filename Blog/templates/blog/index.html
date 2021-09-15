@@ -1,0 +1,8 @@
+{% extends 'blog/layout.html' %} {% block title %} Login Page{% endblock%}
+{%block body %}
+<h1>Welcome To Our Club</h1>
+<ul>
+  {% for person in people %}
+  <li>{{ person.name }}</li>
+  {% endfor %}{% endblock %}
+</ul>

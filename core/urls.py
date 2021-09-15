@@ -20,7 +20,7 @@ from Blog.admin import blog_site
 urlpatterns = [
     path('blogadmin/', blog_site.urls),
     path('admin/', admin.site.urls),
-    path('homepage/', include('homepage.urls')),
+    path('Blog', include('Blog.urls')),
 ]
 
 blog_site.index_title = 'Blog Admin Page'
