@@ -1,8 +1,17 @@
 {% extends 'blog/layout.html' %} {% block title %} Login Page{% endblock%}
 {%block body %}
-<h1>Welcome To Our Club</h1>
-<ul>
-  {% for person in people %}
-  <li>{{ person.name }}</li>
-  {% endfor %}{% endblock %}
-</ul>
+
+<div class="container mx-auto bg-gradient-to-r from-green-400 to-blue-500">
+  <h1 class="mx-8 h-12 w-62 text-center font-bold py-10 text-6xl text-white">
+    Welcome To Our Club
+  </h1>
+
+  <h2 class="mx-8 h-6 w-42 text-center font-bold py-5 text-6xm text-white">
+    Here we Celebrate Greatness and Handworks
+  </h2>
+  <ul>
+    {% for person in people %}
+    <li>{{ person.name }}</li>
+    {% endfor %}{% endblock %}
+  </ul>
+</div>

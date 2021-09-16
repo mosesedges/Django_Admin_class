@@ -16,11 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from Blog.admin import blog_site
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('blogadmin/', blog_site.urls),
     path('admin/', admin.site.urls),
     path('Blog', include('Blog.urls')),
+    path('', TemplateView.as_view(template_name='blog/index.html')),
+    path('Customers', include('Customers.urls')),
 ]
 
 blog_site.index_title = 'Blog Admin Page'
